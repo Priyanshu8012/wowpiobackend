@@ -18,6 +18,7 @@ import announcementRoutes from './routes/announcement.routes.js';
 import subscriberRoutes from './routes/subscriber.routes.js';
 import batchRoutes from './routes/batch.routes.js';
 import chatEnquiryRoutes from './routes/chatEnquiry.routes.js';
+import settingsRoutes from './routes/settings.routes.js';
 
 // Setup __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -50,6 +51,7 @@ app.use('/api/announcement', announcementRoutes);
 app.use('/api/subscribers', subscriberRoutes);
 app.use('/api/batches', batchRoutes);
 app.use('/api/chat-enquiries', chatEnquiryRoutes);
+app.use('/api/settings', settingsRoutes);
 
 // Upload endpoint — images (incl. animated GIF) + short videos
 app.post('/api/upload', (req, res) => {
